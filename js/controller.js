@@ -7,7 +7,11 @@ app.controller('primerController',['$scope','$http', function($scope,$http){
     $scope.fechaHoy = new Date();
 
     $scope.presentate = () =>{
-        alert(`${$scope.persona.nombre}`)
+        alert(`Bienvenido  ${$scope.persona.nombre}`)
+    }
+
+    $scope.presentateNombre = (name) =>{
+        alert(`Bienvenido  ${name}`)
     }
 
     $scope.valorCambiado="";

@@ -14,6 +14,8 @@
     <h2 ng-bind="persona.apellido">{{persona.apellido}}</h2>
     <button ng-click="presentate()">Has clic</button>
     <input type="text" ng-model="valorCambiado" ng-change="cambioText()">
+    <input type="text" ng-model="name">
+    <button ng-click="presentateNombre(name)">Presentando nombre</button>
     <br>
     <br>
     <label>{{fechaHoy | date: mediumTime}}</label>
