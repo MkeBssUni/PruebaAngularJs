@@ -29,7 +29,7 @@ app.controller('primerController',['$scope','$http', function($scope,$http){
     }).catch(error =>{
         console.log("error ",error)
     }); */
-    $http({
+   /*  $http({
         method: 'GET',
         url: 'http://localhost:8080/CapacitacionStruts/consultarPersonas'
     }).then(function(response){
@@ -37,7 +37,7 @@ app.controller('primerController',['$scope','$http', function($scope,$http){
         console.log(response.data)
     }).catch(error =>{
         console.log("error ",error)
-    });
+    }); */
     
     /* $http({
         method: 'POST',
