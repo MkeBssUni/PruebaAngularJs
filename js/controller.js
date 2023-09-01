@@ -20,11 +20,21 @@ app.controller('primerController',['$scope','$http', function($scope,$http){
         alert('Algo pasaaaa', valorCambiado)
     }
 
-    $http({
+    /* $http({
         method: 'GET',
         url: API_URL+'v2/pokemon/ditto'
     }).then(function(response){
-        console.log("response: ", response)
+        $scope.dataResponse= response.data
+        console.log(response.data)
+    }).catch(error =>{
+        console.log("error ",error)
+    }); */
+    $http({
+        method: 'GET',
+        url: 'http://localhost:8080/CapacitacionStruts/consultarPersonas'
+    }).then(function(response){
+        $scope.dataResponse= response.data
+        console.log(response.data)
     }).catch(error =>{
         console.log("error ",error)
     });

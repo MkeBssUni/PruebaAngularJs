@@ -19,5 +19,38 @@
     <br>
     <br>
     <label>{{fechaHoy | date: mediumTime}}</label>
+
+    <form>
+       <div>
+            Ingresa un número
+            <input type="number" ng-model="num1">
+       </div>
+        <div<br>
+            Selecciona una operación
+            <br>
+            <select ng-model="operacion">
+                <option value="suma">Suma</option>
+                <option value="resta">Resta</option>
+                <option value="multiplicacion">Multiplicación</option>
+                <option value="division">División</option>
+            <br></div>
+        <div>
+            Ingresa otro número
+            <input type="number" ng-model="num2">
+        </div>
+    </form>
+    <h3>El resultado es {{
+        operacion == 'suma' ? num1 + num2 :
+        operacion == 'resta' ? num1 - num2 :
+        operacion == 'multiplicacion' ? num1 * num2 :
+        operacion == 'division' ? num1 / num2 :
+        'No se ha seleccionado una operación'
+    }}</h3>
+
+    <br>
+    <br>
+    <h1>{{dataResponse.name}}</h1>
+    
+
 </body>
 </html>
